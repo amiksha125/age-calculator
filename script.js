@@ -10,6 +10,8 @@ userInput.max = new Date().toISOString().split("T")[0]; //Date() returns todaysd
 
 //add onclick = "calculateAge()" attribute to button tag so that when u click the button it will trigger this func.
 
+let result = document.getElementById("result");
+
 function calculateAge(){
 
     let birthDate = new Date(userInput.value);
@@ -58,6 +60,8 @@ function calculateAge(){
     }
 
     console.log(date3, month3, year3);
+
+    result.innerHTML = `You are ${year3} years, ${month3} moonths and ${date3} days old.`
 
 }
 
